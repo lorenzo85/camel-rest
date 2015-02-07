@@ -12,7 +12,7 @@ Setup
 
 Run the build
 ==================================================================
-1. Build: gradle clean fatJar
+1. Build: ./gradlew clean fatJar
 2. Execute (Standalone): java -jar build/libs/camel-web-api.jar
 
 Test the API
