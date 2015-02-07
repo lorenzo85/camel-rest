@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: geronimo-servlet_3.0_spec-1.0">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-servlet_3.0_spec/1.0/geronimo-servlet_3.0_spec-1.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
