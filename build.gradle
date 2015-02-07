@@ -55,6 +55,11 @@ dependencies {
     testCompile("junit:junit")
 }
 
+
+task camel(dependsOn: fatJar) {
+    println "Building camel REST Api"
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.0'
 }

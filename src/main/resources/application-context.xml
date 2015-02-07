@@ -9,7 +9,7 @@
     <context:property-placeholder location="classpath:application.properties"/>
 
     <!-- import the camel context routes -->
-    <import resource="META-INF/spring/camel-context.xml"/>
+    <import resource="camel-context.xml"/>
     <bean id="userService" class="org.camel.web.api.user.UserService"/>
 
     <!-- Spring Data JPA configuration -->
