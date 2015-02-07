@@ -1,0 +1,45 @@
+
+
+What is it ?
+==================================================================
+Simple project showing how to create REST endpoint with camel backed
+by Spring service and Data JPA.
+
+Setup
+==================================================================
+1. Insall gradle (or run ./gradlew clean fatJar)
+2. Setup MySQL schema and update src/main/java/resources/application.properties parameters if needed
+
+Run the build
+==================================================================
+1. Build: gradle clean fatJar
+2. Execute (Standalone): java -jar build/libs/camel-web-api.jar
+
+Test the API
+==================================================================
+CREATE:  curl -X POST -H "Content-Type: application/json" -d '{"name":"John"}' http://localhost:8095/user
+READ: curl -X GET http://localhost:8095/user/2
+UPDATE: curl -X PUT -H "Content-Type: application/json" -d '{"name": "New name"}' http://localhost:8095/user/2
+DELETE: curl -X DELETE http://localhost:8095/user/2
+FIND ALL: curl -X GET http://localhost:8095/user/findAll
+
+
+
+Configure Spring Data JPA by using XML configuration steps:
+==================================================================
+
+1. Configure data source bean
+2. Configure the entity manager factory bean
+3. Configure the transaction manager bean
+4. Enable annotation driven transaction management
+5. Configure Spring Data JPA
+
+For example see: src/main/java/resources/application-context.xml
+
+Define MySQL new database and create user
+==================================================================
+1. Log in as root
+2. CREATE DATABASE databaseName;
+3. CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+4. GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+5. FLUSH PRIVILEGES;
