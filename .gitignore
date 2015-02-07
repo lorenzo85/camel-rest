@@ -2,4 +2,3 @@
 !/.gitignore
 build/*
 *.iml
-gradle/*
